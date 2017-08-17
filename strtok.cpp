@@ -6,7 +6,7 @@ std::vector<std::string> strtok(std::string mashedString, char delimiter){
     std::vector<std::string> tokens;
     int length = mashedString.size();
 
-    if(length <= 0) {
+    if(mashedString.empty()) {
         return tokens;
     }
 
