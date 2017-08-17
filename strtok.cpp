@@ -11,7 +11,7 @@ std::vector<std::string> strtok(std::string mashedString, char delimiter){
     }
 
     std::string token;
-    for(unsigned int i = 0 ; i < length ; i++) {
+    for(int i = 0 ; i < length ; i++) {
         if(mashedString[i] == delimiter) {
             if(token.empty()) {
                 continue;
@@ -31,7 +31,7 @@ std::vector<std::string> strtok(std::string mashedString, char delimiter){
     return tokens;
 }
 
-int main(int argc, char** argv) {
+int main() {
     char delimiter = '|';
     std::string testString = "test | test 1 | test 2";
 
@@ -41,7 +41,7 @@ int main(int argc, char** argv) {
     std::cout << testString.c_str() << "\n";
     std::cout << "are:\n";
 
-    for(int i = 0 ; i < result.size() ; i++ ) {
+    for(unsigned long i = 0 ; i < result.size() ; i++ ) {
         std::cout << result[i] << "\n";
     }
 
