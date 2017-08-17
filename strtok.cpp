@@ -10,9 +10,12 @@ std::vector<std::string> strtok(std::string mashedString, char delimiter){
         return tokens;
     }
 
+    std::cout << "Delimiter is " << delimiter << "\n";
+    std::cout << "Length " << length << "\n";
+
     std::string token;
     for(unsigned int i = 0 ; i < length ; i++) {
-        //std::cout << mashedString[i] << "\n";
+        std::cout << i << "\t" << mashedString[i] << "\n";
         if(mashedString[i] == delimiter || i == length - 1) {
             if(token.size() == 0) {
                 continue;
@@ -22,6 +25,7 @@ std::vector<std::string> strtok(std::string mashedString, char delimiter){
             }
         } else if(mashedString[i] != delimiter)  {
             token.push_back(mashedString[i]);
+            std::cout << "Token is now " << token.c_str() << "\n";
         }
     }
 
