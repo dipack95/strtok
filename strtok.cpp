@@ -11,15 +11,16 @@ std::vector<std::string> strtok(std::string mashedString, char delimiter){
     }
 
     std::string token;
-    for(int i = 0 ; i < length ; i++) {
-        if(mashedString[i] == delimiter) {
+    for(unsigned int i = 0 ; i < length ; i++) {
+        //std::cout << mashedString[i] << "\n";
+        if(mashedString[i] == delimiter || i == length - 1) {
             if(token.size() == 0) {
                 continue;
             } else {
                 tokens.push_back(token);
                 token.clear();
             }
-        } else if(mashedString[i] != delimiter || mashedString[i] == '\0') {
+        } else if(mashedString[i] != delimiter)  {
             token.push_back(mashedString[i]);
         }
     }
