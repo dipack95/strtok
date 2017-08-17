@@ -2,7 +2,7 @@
 # include <vector>
 # include <string>
 
-std::vector<std::string> strtok(std::string mashedString, char delimiter){
+std::vector<std::string> strtok(std::string mashedString, char delimiter) {
     std::vector<std::string> tokens;
     int length = mashedString.size();
 
@@ -41,7 +41,7 @@ int main() {
     std::cout << testString.c_str() << "\n";
     std::cout << "are:\n";
 
-    for(unsigned long i = 0 ; i < result.size() ; i++ ) {
+    for(unsigned long i = 0 ; i < result.size() ; i++) {
         std::cout << result[i] << "\n";
     }
 
