@@ -38,7 +38,7 @@ int main() {
     std::vector<std::string> result = strtok(testString, delimiter);
 
     std::cout << "The tokens in\n";
-    std::cout << testString.c_str() << "\n";
+    std::cout << testString.c_str() << std::endl;
     std::cout << "are:\n";
 
     for(unsigned long i = 0 ; i < result.size() ; i++) {
